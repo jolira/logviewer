@@ -1,17 +1,20 @@
 (function (app, Backbone, _) {
     "use strict";
 
-    var MSG_TEMPLATE = app.utils.template("script[id='message']");
+    var MSG_TEMPLATE = app.utils.template("script[id='message']"),
+        lastDay;
 
     function format(ts) {
         var date = new Date(ts),
-            year = date.getFullYear(),
             month = date.getMonth() + 1,
             day = date.getDate(),
             hour = date.getHours(),
             minutes = date.getMinutes(),
             seconds = date.getSeconds(),
-            milis = date.getMilliseconds();
+            milis = date.getMilliseconds(),
+            result = lastDay === day ? "" : date.getFullYear() + "/" + month + "/" + day + "<br>";
+
+        lastDay = day;
 
         if (minutes < 10) {
             minutes = "0" + minutes;
@@ -26,7 +29,7 @@
             milis = "0" + milis;
         }
 
-        return year + "/" + month + "/" + day + "&nbsp;" + hour + ":" + minutes + ":" + seconds + "." + milis;
+        return result + hour + ":" + minutes + ":" + seconds + "." + milis;
     }
 
     function log(message) {

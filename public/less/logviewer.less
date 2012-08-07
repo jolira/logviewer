@@ -5,15 +5,13 @@
 @backgroundColor: lightgray;
 
 .logs {
-    font-size: @baseFontSize - 2; // 14px to 12px
-    word-break: break-all;
-    word-wrap: break-word;
+    font-size: @baseFontSize - 3; // 14px to 12px
+    line-height: normal;
     overflow-y: scroll;
     display: table;
     width: 100%;
-    div {
+    div.entry {
         display: table-row;
-        padding-bottom: 3px;
 
         &.error {
             background-color: #ffb6c1;
@@ -22,8 +20,17 @@
             background-color: #ffffe0;
         }
         div {
-            padding-right: 5px;
+            padding-bottom: 3px;
+            vertical-align: bottom;
             display: table-cell;
+            border-bottom: solid 1px #808080;
+            &.timestamp {
+                min-width: 68px;
+                text-align: center;
+            }
+            &.level {
+                padding-right: 3px;
+            }
             &.message {
                 width: auto;
             }

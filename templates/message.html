@@ -1,6 +1,6 @@
-<div class="<%= level %>">
-    <div><%= timestamp %></div>
-    <div><%= level %></div>
+<div class="entry <%= level %>">
+    <div class="timestamp"><%= timestamp %></div>
+    <div class="level"><%= level %></div>
     <div class="message"><%
         _.each(content, function(param) {
             print(param);
