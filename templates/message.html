@@ -1,0 +1,10 @@
+<div class="<%= level %>">
+    <div><%= timestamp %></div>
+    <div><%= level %></div>
+    <div class="message"><%
+        _.each(content, function(param) {
+            print(param);
+            print(" ");
+        });
+    %></div>
+</div>

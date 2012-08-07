@@ -30,7 +30,7 @@
                     defaults.trailingScripts.push(dir);
                 });
             [
-                // path.join(templates, "logviewer.html")
+                path.join(templates, "message.html")
             ].forEach(function (dir) {
                     defaults.templateFiles.push(dir);
                 });
