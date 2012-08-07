@@ -1,0 +1,9 @@
+test
+node_modules
+docs
+sites/*
+.nide
+*~
+*.log
+.idea
+.DS_Store

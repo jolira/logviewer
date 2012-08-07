@@ -1,0 +1,35 @@
+{
+    "name":"jolira-logviewer",
+    "version":"0.0.1",
+    "description":"view log files stored on S3",
+    "keywords":["logs"],
+    "contributors": [
+        "Joachim Kainz <jfk@jolira.com> (http://www.jolira.com)"
+    ],
+    "repository":{
+        "url":"https://github.com/jolira/log-viewer.git",
+        "type":"git"
+    },
+    "dependencies":{
+        "site-manager-baseline": "*",
+        "site-manager": "*",
+        "awssum":"*"
+    },
+    "devDependencies":{
+        "horaa":"*",
+        "vows":"*",
+        "jake":"*"
+    },
+    "scripts":{
+        "test":"jake test",
+        "prepublish":"npm prune"
+    },
+    "bugs":{
+        "mail":"dev@jolira.com",
+        "url":"http://github.com/jolira/log-viewer/issues"
+    },
+    "main":"index",
+    "engines":{
+        "node":">= 0.8.0"
+    }
+}
