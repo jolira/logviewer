@@ -7,7 +7,7 @@
 .logs {
     font-size: @baseFontSize - 3; // 14px to 12px
     line-height: normal;
-    overflow-y: scroll;
+    overflow: scroll;
     display: table;
     width: 100%;
     div.entry {
@@ -30,17 +30,17 @@
             vertical-align: bottom;
             display: table-cell;
             border-bottom: solid 1px #808080;
-            &.timestamp {
+            &.info {
                 min-width: 68px;
-                text-align: center;
-            }
-            &.level, &.host, &.app {
                 padding-right: 3px;
+                text-align: center;
             }
             &.message {
                 width: auto;
                 font-family: monospace;
                 white-space: pre;
+                word-break: break-all;
+                word-wrap: break-word;
             }
         }
     }

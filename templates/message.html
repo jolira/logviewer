@@ -1,12 +1,4 @@
 <div class="entry <%= level %>">
-    <div class="timestamp"><%= timestamp %></div>
-    <div class="level"><%= level %></div>
-    <div class="host"><%= host %></div>
-    <div class="app"><%= app %></div>
-    <div class="message"><%
-        _.each(content, function(value) {
-            print(JSON.stringify(value, undefined, 2));
-            print(" ");
-        });
-    %></div>
+    <div class="info"><%= timestamp %><br><%= level %><br><%= host %><br><%= app %></div>
+    <div class="message"><%= JSON.stringify(content, undefined, 2) %></div>
 </div>
