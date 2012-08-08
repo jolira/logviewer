@@ -32,12 +32,14 @@
         return result + hour + ":" + minutes + ":" + seconds + "." + milis;
     }
 
-    function log(message) {
+    function log(opts, message) {
         if (message.ms) {
             var self = this;
 
             _.each(message.ms, function (msg) {
                 self.$el.append(MSG_TEMPLATE({
+                    host: opts.host,
+                    app: opts.app,
                     timestamp:format(msg.ts),
                     level:msg.lv,
                     content:msg.ct
