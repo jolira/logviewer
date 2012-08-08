@@ -33,19 +33,19 @@
     }
 
     function appendOther(self, opts, level, ts, data) {
-        var content = [];
-
         _.each(data, function(value, key) {
-            content.push(key + ": " + JSON.stringify(value));
+            var content = key + ": " + JSON.stringify(value),
+                timestamp = format(ts);
+
+            self.$el.append(MSG_TEMPLATE({
+                host:opts.host,
+                app:opts.app,
+                timestamp:timestamp,
+                level:level,
+                content:[content]
+            }));
         });
 
-        self.$el.append(MSG_TEMPLATE({
-            host:opts.host,
-            app:opts.app,
-            timestamp:format(ts),
-            level:level,
-            content:content
-        }));
     }
 
     function log(opts, message) {
