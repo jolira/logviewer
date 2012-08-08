@@ -38,14 +38,32 @@
 
             _.each(message.ms, function (msg) {
                 self.$el.append(MSG_TEMPLATE({
-                    host: opts.host,
-                    app: opts.app,
+                    host:opts.host,
+                    app:opts.app,
                     timestamp:format(msg.ts),
                     level:msg.lv,
                     content:msg.ct
                 }));
 
             });
+        }
+        if (message.os) {
+            this.$el.append(MSG_TEMPLATE({
+                host:opts.host,
+                app:opts.app,
+                timestamp:format(message.ts),
+                level:"os",
+                content:JSON.stringify(message.os)
+            }));
+        }
+        if (message.process) {
+            this.$el.append(MSG_TEMPLATE({
+                host:opts.host,
+                app:opts.app,
+                timestamp:format(message.ts),
+                level:"process",
+                content:JSON.stringify(message.process)
+            }));
         }
     }
 
