@@ -4,8 +4,8 @@
     <div class="host"><%= host %></div>
     <div class="app"><%= app %></div>
     <div class="message"><%
-        _.each(content, function(param) {
-            print(param);
+        _.each(content, function(value) {
+            print(JSON.stringify(value, undefined, 2));
             print(" ");
         });
     %></div>

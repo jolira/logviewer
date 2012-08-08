@@ -34,7 +34,7 @@
 
     function appendOther(self, opts, level, ts, data) {
         _.each(data, function(value, key) {
-            var content = key + ": " + JSON.stringify(value),
+            var content = [key, value],
                 timestamp = format(ts);
 
             self.$el.append(MSG_TEMPLATE({
@@ -42,7 +42,7 @@
                 app:opts.app,
                 timestamp:timestamp,
                 level:level,
-                content:[content]
+                content:content
             }));
         });
 
