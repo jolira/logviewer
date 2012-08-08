@@ -32,6 +32,22 @@
         return result + hour + ":" + minutes + ":" + seconds + "." + milis;
     }
 
+    function appendOther(self, opts, level, ts, data) {
+        var content = [];
+
+        _.each(data, function(value, key) {
+            content.push(key + ": " + JSON.stringify(value));
+        });
+
+        self.$el.append(MSG_TEMPLATE({
+            host:opts.host,
+            app:opts.app,
+            timestamp:format(ts),
+            level:level,
+            content:content
+        }));
+    }
+
     function log(opts, message) {
         if (message.ms) {
             var self = this;
@@ -48,22 +64,10 @@
             });
         }
         if (message.os) {
-            this.$el.append(MSG_TEMPLATE({
-                host:opts.host,
-                app:opts.app,
-                timestamp:format(message.ts),
-                level:"os",
-                content:JSON.stringify(message.os)
-            }));
+            appendOther(this, opts, "os", message.ts, message.os);
         }
         if (message.process) {
-            this.$el.append(MSG_TEMPLATE({
-                host:opts.host,
-                app:opts.app,
-                timestamp:format(message.ts),
-                level:"process",
-                content:JSON.stringify(message.process)
-            }));
+            appendOther(this, opts, "process", message.ts, message.process);
         }
     }
 
