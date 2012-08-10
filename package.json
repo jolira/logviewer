@@ -7,7 +7,7 @@
         "Joachim Kainz <jfk@jolira.com> (http://www.jolira.com)"
     ],
     "repository":{
-        "url":"https://github.com/jolira/log-viewer.git",
+        "url":"https://github.com/jolira/logviewer.git",
         "type":"git"
     },
     "dependencies":{
@@ -26,7 +26,7 @@
     },
     "bugs":{
         "mail":"dev@jolira.com",
-        "url":"http://github.com/jolira/log-viewer/issues"
+        "url":"http://github.com/jolira/logviewer/issues"
     },
     "main":"index",
     "engines":{
