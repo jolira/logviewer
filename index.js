@@ -18,7 +18,7 @@
                 'aws-secret-access-key':lopts['aws-secret-access-key'] || gopts['aws-secret-access-key'],
                 'aws-account-id':lopts['aws-account-id'] || gopts['aws-account-id'],
                 'aws-region':lopts['aws-region'] || gopts['aws-region'],
-                'aws-bucket':lopts['aws-bucket'] || gopts['aws-bucket']
+                'aws-bucket':lopts['aws-log-bucket'] || gopts['aws-log-bucket']
             }));
 
             defaults.title = "Log Viewer";
