@@ -1,7 +1,7 @@
 (function (app, Backbone, _) {
     "use strict";
 
-    var MSG_TEMPLATE = app.utils.template("script[id='message']"),
+    var MSG_TEMPLATE = app.utils.template("script[id='logmessage']"),
         lastDay;
 
     function format(ts) {
@@ -65,14 +65,22 @@
         }
     }
 
+    function connect() {
+        app.middle.emit('subscribe-real-time-logs');
+    }
+
     var View = Backbone.View.extend({
         initialize:function () {
             app.middle.on("log", log, this);
+            app.middle.on("connect", connect, this);
 
-            app.middle.emit('subscribe-real-time-logs');
+            if (app.middle.connected) {
+                app.middle.emit('subscribe-real-time-logs');
+            }
         },
         close:function () {
             app.middle.off("log", log, this);
+            app.middle.off("connect", connect, this);
         },
         render:function () {
             this.$el.html("").addClass("well logs");
@@ -81,11 +89,7 @@
         }
     });
 
-    app.starter.$(function (next) {
-        app.container.route("*default", "default", function (route, cb) {
-            return cb(undefined, new View({}));
-        });
-
-        return next();
-    });
+    app.logviewer = app.logviewer || function(cb) {
+        return cb(undefined, new View({}));
+    };
 })(window["jolira-app"], Backbone, _);

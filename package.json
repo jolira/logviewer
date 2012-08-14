@@ -1,6 +1,6 @@
 {
     "name":"jolira-logviewer",
-    "version":"0.1.6",
+    "version":"0.2.0",
     "description":"view log files stored on S3",
     "keywords":["logs"],
     "contributors": [
