@@ -75,7 +75,7 @@
             app.middle.on("connect", connect, this);
 
             if (app.middle.connected) {
-                app.middle.emit('subscribe-real-time-logs');
+                connect();
             }
         },
         close:function () {
