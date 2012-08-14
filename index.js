@@ -72,4 +72,6 @@
             });
         });
     };
+
+    module.exports.embedded = addDefaults;
 })(module);
