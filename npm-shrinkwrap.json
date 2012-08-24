@@ -1,0 +1,318 @@
+{
+  "name": "jolira-logviewer",
+  "version": "0.2.2",
+  "dependencies": {
+    "site-manager-baseline": {
+      "version": "0.8.15",
+      "dependencies": {
+        "socket.io": {
+          "version": "0.9.10",
+          "dependencies": {
+            "socket.io-client": {
+              "version": "0.9.10",
+              "dependencies": {
+                "uglify-js": {
+                  "version": "1.2.5"
+                },
+                "ws": {
+                  "version": "0.4.21",
+                  "dependencies": {
+                    "commander": {
+                      "version": "0.6.1"
+                    },
+                    "tinycolor": {
+                      "version": "0.0.1"
+                    },
+                    "options": {
+                      "version": "0.0.3"
+                    }
+                  }
+                },
+                "xmlhttprequest": {
+                  "version": "1.4.2"
+                },
+                "active-x-obfuscator": {
+                  "version": "0.0.1",
+                  "dependencies": {
+                    "zeparser": {
+                      "version": "0.0.5"
+                    }
+                  }
+                }
+              }
+            },
+            "policyfile": {
+              "version": "0.0.4"
+            },
+            "redis": {
+              "version": "0.7.2"
+            }
+          }
+        },
+        "handlebars": {
+          "version": "1.0.6-2",
+          "dependencies": {
+            "optimist": {
+              "version": "0.3.4",
+              "dependencies": {
+                "wordwrap": {
+                  "version": "0.0.2"
+                }
+              }
+            },
+            "uglify-js": {
+              "version": "1.2.6"
+            }
+          }
+        },
+        "jolira-bootstrap": {
+          "version": "2.1.0"
+        }
+      }
+    },
+    "site-manager": {
+      "version": "0.8.11",
+      "dependencies": {
+        "handlebars": {
+          "version": "1.0.6-2",
+          "dependencies": {
+            "optimist": {
+              "version": "0.3.4",
+              "dependencies": {
+                "wordwrap": {
+                  "version": "0.0.2"
+                }
+              }
+            },
+            "uglify-js": {
+              "version": "1.2.6"
+            }
+          }
+        },
+        "404project": {
+          "version": "0.1.1"
+        },
+        "connect-less-jolira": {
+          "version": "0.1.0",
+          "dependencies": {
+            "less": {
+              "version": "1.3.0"
+            }
+          }
+        },
+        "directory-tree-watcher": {
+          "version": "0.1.1"
+        },
+        "express": {
+          "version": "3.0.0rc3",
+          "dependencies": {
+            "connect": {
+              "version": "2.4.3",
+              "dependencies": {
+                "qs": {
+                  "version": "0.4.2"
+                },
+                "formidable": {
+                  "version": "1.0.11"
+                },
+                "bytes": {
+                  "version": "0.1.0"
+                },
+                "pause": {
+                  "version": "0.0.1"
+                }
+              }
+            },
+            "commander": {
+              "version": "0.6.1"
+            },
+            "range-parser": {
+              "version": "0.0.4"
+            },
+            "mkdirp": {
+              "version": "0.3.3"
+            },
+            "cookie": {
+              "version": "0.0.4"
+            },
+            "crc": {
+              "version": "0.2.0"
+            },
+            "fresh": {
+              "version": "0.1.0"
+            },
+            "methods": {
+              "version": "0.0.1"
+            },
+            "send": {
+              "version": "0.0.3",
+              "dependencies": {
+                "mime": {
+                  "version": "1.2.6"
+                }
+              }
+            },
+            "debug": {
+              "version": "0.7.0"
+            }
+          }
+        },
+        "connect": {
+          "version": "2.4.4",
+          "dependencies": {
+            "qs": {
+              "version": "0.4.2"
+            },
+            "formidable": {
+              "version": "1.0.11"
+            },
+            "crc": {
+              "version": "0.2.0"
+            },
+            "cookie": {
+              "version": "0.0.4"
+            },
+            "bytes": {
+              "version": "0.1.0"
+            },
+            "send": {
+              "version": "0.0.4",
+              "dependencies": {
+                "mime": {
+                  "version": "1.2.6"
+                },
+                "range-parser": {
+                  "version": "0.0.4"
+                }
+              }
+            },
+            "fresh": {
+              "version": "0.1.0"
+            },
+            "pause": {
+              "version": "0.0.1"
+            },
+            "debug": {
+              "version": "0.7.0"
+            }
+          }
+        },
+        "jolira-logger": {
+          "version": "0.2.4",
+          "dependencies": {
+            "debug": {
+              "version": "0.7.0"
+            },
+            "horaa": {
+              "version": "0.1.2alpha"
+            },
+            "server-config": {
+              "version": "0.0.2"
+            },
+            "vows": {
+              "version": "0.6.3",
+              "dependencies": {
+                "eyes": {
+                  "version": "0.1.7"
+                }
+              }
+            },
+            "jake": {
+              "version": "0.3.7",
+              "dependencies": {
+                "minimatch": {
+                  "version": "0.2.5",
+                  "dependencies": {
+                    "lru-cache": {
+                      "version": "1.1.0"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "batch": {
+          "version": "0.1.1",
+          "dependencies": {
+            "mocha": {
+              "version": "1.4.0",
+              "dependencies": {
+                "commander": {
+                  "version": "0.6.1"
+                },
+                "growl": {
+                  "version": "1.5.1"
+                },
+                "jade": {
+                  "version": "0.26.3",
+                  "dependencies": {
+                    "mkdirp": {
+                      "version": "0.3.0"
+                    }
+                  }
+                },
+                "diff": {
+                  "version": "1.0.2"
+                },
+                "debug": {
+                  "version": "0.7.0"
+                },
+                "mkdirp": {
+                  "version": "0.3.3"
+                }
+              }
+            },
+            "should": {
+              "version": "1.1.0"
+            }
+          }
+        }
+      }
+    },
+    "awssum": {
+      "version": "0.9.0",
+      "dependencies": {
+        "fmt": {
+          "version": "0.4.0"
+        },
+        "underscore": {
+          "version": "1.3.3"
+        },
+        "xml2js": {
+          "version": "0.1.14",
+          "dependencies": {
+            "sax": {
+              "version": "0.4.2"
+            }
+          }
+        },
+        "dateformat": {
+          "version": "1.0.2-1.2.3"
+        },
+        "xml": {
+          "version": "0.0.7"
+        },
+        "data2xml": {
+          "version": "0.5.0"
+        },
+        "passgen": {
+          "version": "1.0.1",
+          "dependencies": {
+            "vows": {
+              "version": "0.6.4",
+              "dependencies": {
+                "eyes": {
+                  "version": "0.1.7"
+                },
+                "diff": {
+                  "version": "1.0.3"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
